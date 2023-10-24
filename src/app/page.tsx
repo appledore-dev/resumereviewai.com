@@ -1,113 +1,61 @@
+'use client'
+
 import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+  const router = useRouter()
+  return <div>
+    <div className="container mx-auto max-w-4xl">
+      <div className="min-h-full bg-base-100 py-16 flex-wrap justify-center xl:justify-between gap-5">
+        <div className="hover:cursor-pointer" onClick={() => router.push('/')}>
+          <h1 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight">Resume Review AI</h1>
         </div>
       </div>
+    </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+    <div className="container mx-auto max-w-4xl">
+      <h1 className="text-3xl lg:text-5xl font-bold tracking-tighter !leading-tight">Resume Worded vs. automix.ai: Elevating Your Resume with AI</h1>
+      <div className="prose">
+        <blockquote className="my-4 border-l-4 border-stone-700 font-normal">
+          <a href="https://automix.ai">automix.ai</a> stands out with in-depth analysis, clear steps, affordability, privacy, and innovative features. It&apos;s your key to an exceptional job search.
+        </blockquote>
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div>
+        <Image src="/post0001.png" width={1216} height={832} alt="Resume Worded vs. automix.ai: Elevating Your Resume with AI" className="w-full" />
       </div>
-    </main>
-  )
+      <div className="prose py-8 max-w-full">
+        <p>
+          In the competitive world of job hunting, your resume is your first opportunity to make a lasting impression on potential employers. Ensuring your resume stands out and accurately reflects your skills and experiences is paramount. Resume optimization tools have gained popularity for helping job seekers achieve this, but not all platforms are created equal. In this article, we&apos;ll compare two such tools: Resume Worded and <a href="https://automix.ai">automix.ai</a>, and explore how <a href="https://automix.ai">automix.ai</a> offers a superior solution for job seekers.
+        </p>
+        <h3>1. Detailed Analysis and Clear Action Steps</h3>
+        <p>
+          <a href="https://automix.ai">automix.ai</a> goes the extra mile by providing a comprehensive and in-depth analysis of your resume. It doesn&apos;t just highlight potential issues; it offers clear, actionable suggestions on how to improve your document. This hands-on approach gives users specific steps to enhance their resumes, making it easier to implement improvements.
+        </p>
+        <h3>2. Affordable, One-time Payment</h3>
+        <p>
+          While Resume Worded often comes with subscription models, <a href="https://automix.ai">automix.ai</a> is tailored for the budget-conscious job seeker. Offering a one-time payment option, <a href="https://automix.ai">automix.ai</a> eliminates the need for recurrent financial commitments, ensuring that users get the most value for their money.
+        </p>
+        <h3>3. Privacy-Safe Approach</h3>
+        <p>
+          Privacy is a paramount concern in today&apos;s digital landscape. Resume Worded may require users to share personal data, potentially raising privacy concerns. In contrast, <a href="https://automix.ai">automix.ai</a> ensures that your data is kept secure and doesn&apos;t share it with any third parties, providing peace of mind to users.
+        </p>
+        <h3>4. Innovative Features</h3>
+        <p>
+          <a href="https://automix.ai">automix.ai</a> offers an array of innovative features designed to help job seekers not just create a compelling resume but also excel in the job market. Features like mock interviews with AI, resume consultation with AI advisors, access to online courses, and the ability to generate tailored resumes using the job description set <a href="https://automix.ai">automix.ai</a> apart from its competitors, making it a one-stop platform for career enhancement.
+        </p>
+        <h3>5. Tailored Resume Generation</h3>
+        <p>
+          One of the standout features of <a href="https://automix.ai">automix.ai</a> is its ability to generate tailored resumes by analyzing job descriptions. This ensures that your resume aligns perfectly with the specific requirements of the job you&apos;re targeting. Resume Worded may not offer this level of customization.
+        </p>
+        <p>
+          In conclusion, while both Resume Worded and <a href="https://automix.ai">automix.ai</a> are valuable tools for job seekers, <a href="https://automix.ai">automix.ai</a> takes the lead by offering a more detailed analysis, clear action steps, affordability, enhanced privacy protection, and a rich set of features that empower users to not only create impressive resumes but also excel in their job search journey. With its commitment to user-centric innovation, <a href="https://automix.ai">automix.ai</a> is the ideal choice for anyone looking to make their resume truly stand out in the competitive job market. Don&apos;t just optimize your resume; elevate your entire job search strategy with <a href="https://automix.ai">automix.ai</a>.
+        </p>
+        <p className="text-center py-8">
+          <Link className="btn btn-block md:btn-wide mx-auto btn-primary" href="https://automix.ai">Try automix.ai</Link>
+        </p>
+      </div>
+    </div>
+  </div>
 }
